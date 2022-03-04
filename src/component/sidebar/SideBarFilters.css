@@ -1,0 +1,13 @@
+.sidebar {
+  background-color: #fff;
+  min-width: 245px;
+  width: 266px;
+  height: 100%;
+  border-radius: 5px;
+}
+
+@media only screen and (min-width: 375px) and (max-width: 500px) {
+  .sidebar {
+    width: 95%;
+  }
+}
