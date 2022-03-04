@@ -4,6 +4,14 @@ import PropTypes from 'prop-types';
 import './SidebarFilter.css';
 
 const SidebarFilter = ({ list, header, setFilters, state, selectedFilter }) => {
+    /* Handle Dynamic Filter*/
+    const handleFilter = (filter) => {
+        setFilters((prev) => ({
+            ...prev,
+            [state]: selectedFilter === filter ? '' : filter
+        }))
+    }
+
     return (
         <>
             <div className="filter_header">{header}</div>
@@ -12,10 +20,7 @@ const SidebarFilter = ({ list, header, setFilters, state, selectedFilter }) => {
                     return <div
                         style={{ background: selectedFilter !== filter ? "#c5df9d" : "#7aba02" }}
                         key={filter}
-                        onClick={() => setFilters((prev) => ({
-                            ...prev,
-                            [state]: selectedFilter === filter ? '' : filter
-                        }))}
+                        onClick={() => handleFilter(filter)}
                         className="filter_list"
                     >
                         {filter}

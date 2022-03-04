@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types';
-import { FILTER_LAND_LAUNCHING, FILTER_YEAR } from '../../constant/constant'
+import { FILTER_LANDING_AND_LAUNCHING_YEAR, FILTER_YEAR } from '../../constant/constant'
 import SidebarFilter from '../common/SidebarFilter'
 
 import './SideBarFilters.css'
@@ -21,14 +21,14 @@ const SideBarFilters = ({ setFilters, filters }) => {
                 setFilters={setFilters}
                 state={'successfulLaunch'}
                 selectedFilter={filters.successfulLaunch}
-                list={FILTER_LAND_LAUNCHING}
+                list={FILTER_LANDING_AND_LAUNCHING_YEAR}
             />
             <SidebarFilter
                 header={'Successful Landing'}
                 setFilters={setFilters}
                 state={'successfulLanding'}
                 selectedFilter={filters.successfulLanding}
-                list={FILTER_LAND_LAUNCHING}
+                list={FILTER_LANDING_AND_LAUNCHING_YEAR}
             />
         </div>
     )
